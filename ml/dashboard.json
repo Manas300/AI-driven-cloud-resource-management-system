@@ -1,0 +1,54 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "CPU Forecast: Actual vs Predicted",
+    "timezone": "browser",
+    "schemaVersion": 38,
+    "version": 1,
+    "refresh": "10s",
+    "panels": [
+      {
+        "type": "timeseries",
+        "title": "CPU Usage Forecast",
+        "targets": [
+          {
+            "refId": "A",
+            "expr": "cpu_actual_usage",
+            "legendFormat": "Actual CPU Usage"
+          },
+          {
+            "refId": "B",
+            "expr": "cpu_predicted_usage",
+            "legendFormat": "Predicted CPU Usage"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {}
+          },
+          "overrides": []
+        },
+        "options": {
+          "legend": {
+            "displayMode": "table",
+            "placement": "bottom"
+          },
+          "tooltip": {
+            "mode": "single"
+          }
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        }
+      }
+    ]
+  },
+  "overwrite": false
+}
